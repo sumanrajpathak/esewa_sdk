@@ -2,7 +2,7 @@ group 'com.f1soft.esewa.esewa_flutter_sdk'
 version '1.0-SNAPSHOT'
 
 buildscript {
-    ext.kotlin_version = '1.5.31'
+    ext.kotlin_version = '1.7.10'
     repositories {
         google()
         jcenter()
