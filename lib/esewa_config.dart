@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+enum Environment { test, live }
 
 class EsewaConfig {
   final String clientId;
@@ -10,7 +10,6 @@ class EsewaConfig {
     required this.secretId,
     required this.environment,
   });
-
 }
 
 extension ConfigExt on EsewaConfig {
@@ -20,8 +19,6 @@ extension ConfigExt on EsewaConfig {
         "environment": this.environment.parse(),
       };
 }
-
-enum Environment { test, live }
 
 extension EnvExt on Environment {
   String parse() => this == Environment.live ? 'live' : 'test';

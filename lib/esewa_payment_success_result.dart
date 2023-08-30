@@ -1,7 +1,5 @@
 import 'dart:convert';
 
-import 'dart:io';
-
 EsewaPaymentSuccessResult esewaPaymentResultFromJson(String str) =>
     EsewaPaymentSuccessResult.fromJson(json.decode(str));
 
@@ -9,6 +7,17 @@ String esewaPaymentResultToJson(EsewaPaymentSuccessResult data) =>
     json.encode(data.toJson());
 
 class EsewaPaymentSuccessResult {
+  String productId;
+
+  String productName;
+  String totalAmount;
+  String environment;
+  String code;
+  String merchantName;
+  String message;
+  String date;
+  String status;
+  String refId;
   EsewaPaymentSuccessResult({
     required this.productId,
     required this.productName,
@@ -21,17 +30,6 @@ class EsewaPaymentSuccessResult {
     required this.status,
     required this.refId,
   });
-
-  String productId;
-  String productName;
-  String totalAmount;
-  String environment;
-  String code;
-  String merchantName;
-  String message;
-  String date;
-  String status;
-  String refId;
 
   factory EsewaPaymentSuccessResult.fromJson(Map<String, dynamic> json) =>
       EsewaPaymentSuccessResult(
@@ -61,7 +59,7 @@ class EsewaPaymentSuccessResult {
       };
 
   @override
-  String toString()=>'''
+  String toString() => '''
         "productId": $productId,
         "productName": $productName,
         "totalAmount": $totalAmount,
