@@ -1,6 +1,6 @@
 name: esewa_flutter_sdk
 description: This is an unofficial Flutter plugin of eSewa to easily integrate eSewa payment into your flutter applications.
-version: 2.0.0+11
+version: 0.0.2
 homepage: https://github.com/devSumanrazz/esewa_sdk
 documentation: https://developer.esewa.com.np/#/flutter
 
