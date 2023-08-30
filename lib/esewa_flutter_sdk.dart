@@ -21,8 +21,7 @@ class EsewaFlutterSdk {
     required Function onPaymentFailure,
     required Function onPaymentCancellation,
   }) {
-    _channel.invokeMethod(
-        'initPayment', _buildArgs(esewaConfig, esewaPayment));
+    _channel.invokeMethod('initPayment', _buildArgs(esewaConfig, esewaPayment));
     _channel.setMethodCallHandler((call) async {
       switch (call.method) {
         case PAYMENT_METHOD_SUCCESS:
@@ -33,7 +32,8 @@ class EsewaFlutterSdk {
           } else {
             result = json.decode(call.arguments);
           }
-          final EsewaPaymentSuccessResult paymentResult = EsewaPaymentSuccessResult(
+          final EsewaPaymentSuccessResult paymentResult =
+              EsewaPaymentSuccessResult(
             productId: result["productID"] ?? result["productId"],
             productName: result["productName"],
             totalAmount: result["totalAmount"],
