@@ -2,7 +2,7 @@ group 'com.f1soft.esewa.esewa_flutter_sdk'
 version '1.0-SNAPSHOT'
 
 buildscript {
-    ext.kotlin_version = '1.7.10'
+    ext.kotlin_version = '1.9.10'
     repositories {
         google()
         jcenter()
@@ -27,7 +27,7 @@ rootProject.allprojects {
 
 apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
-apply plugin: 'kotlin-android-extensions'
+// apply plugin: 'kotlin-android-extensions'
 
 android {
 
@@ -38,6 +38,10 @@ android {
     }
     defaultConfig {
         minSdkVersion 16
+    }
+     buildFeatures 
+    {
+        viewBinding = true
     }
 
 }
